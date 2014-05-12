@@ -1,0 +1,12 @@
+<li class='sb-t-nav-link sb-t-nav-link-my-books' ng-mouseenter='viewMyBooks()' ng-mouseleave='closeMyBooks()'>
+	MY BOOKS
+	<div class='my-books-pop'>
+		<ul class='my-books-list'>
+			<li ng-click='viewBook(book)' ng-repeat='book in books' class='my-books-li'>
+				<a ng-href='/books/{{book.id}}' class='my-books-li-link'>
+					{{book.title}}
+				</a>
+			</li>
+		</ul>
+	</div>
+</li>

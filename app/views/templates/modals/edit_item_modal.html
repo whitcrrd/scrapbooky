@@ -1,0 +1,11 @@
+<div class="e-i-fix" ng-class="{editing: editing}" style="position: absolute; left: {{currentEditingItem.x}}px; top: {{currentEditingItem.y}}px;">
+	<div class="e-i-fix-cancel" ng-click="cancel()">x</div>
+	<div class="e-i-fix-header">edit title or delete {{currentEditingItem.cname}}</div>
+	<input type="text" ng-model="currentEditingItem.title">
+	<div class="btn-group">
+		<button class="btn btn-small btn-danger" ng-click="deleteItem(currentEditingItem);">delete</button>
+		<button class="btn btn-small btn-default" ng-click="cancel()">cancel</button>
+		<button class="btn btn-small btn-primary" ng-click="saveItem(currentEditingItem);">save</button>
+	</div>
+</div>
+<div class="e-i-overlay" ng-class="{editing: editing}"></div>

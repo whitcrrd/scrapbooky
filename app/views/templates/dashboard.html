@@ -1,0 +1,11 @@
+<div id="pg" ng-cloak ng-init="init()"></div>
+
+<div class="sb-grid-s"> 
+	<div gridster="gridsterOpts">
+		<ul>
+			<li gridster-item="item" ng-repeat="item in coverItems" class="draggable gridster-i-bx">
+				<book-box value="item"></book-box>
+			</li>
+		</ul>
+	</div>
+</div>

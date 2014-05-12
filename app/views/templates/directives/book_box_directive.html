@@ -1,0 +1,5 @@
+<div ng-mouseenter="showBookTitle()" ng-mouseleave="hideBookTitle()" class="my-class my-class-book-grid" style="background-image:url({{value.url}})" ng-click="viewBook(value)"> 
+	<div class="book-grid-title" ng-show="showingTitle == true" id="book-grid-title-{{value.id}}">
+		{{value.book_title}}
+	</div> 
+</div>

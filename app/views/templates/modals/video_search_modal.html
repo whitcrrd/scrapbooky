@@ -1,0 +1,50 @@
+
+<li ng-show="bookEditableStatus == true" class="sb-t-nav-link-a-video sb-t-nav-link-add" id="trigger-sb-overlay" ng-click="openVideoForm()">+ VIDEO </li> 
+<div class="sb-overlay sb-overlay-slidedown sb-overlay-{{closeStatus}} sb-overlay-{{openStatus}}"> 
+	<div class="sb-overlay-close-btn" ng-click="close()"><i class="glyphicon glyphicon-remove"></i></div> 
+	<div class="n-vid-bx"> 
+		<div class="n-vid-left"> 
+		<div class="n-vid-search-bx"> 
+			<input class="n-vid-search" id="n-vid-search" type="text" placeholder="youtube search terms" ng-model="search"></input> 
+			<div class="n-vid-search-btn" ng-click="searchYoutube()">SEARCH</div> 
+			<div class="n-vid-search-params"> 
+				<span class="s-param p-relevancy active" id="p-relevance" ng-click="setOrderRelevance()">by relevance</span>  |  
+				<span class="s-param p-view-count" id="p-view-count" ng-click="setOrderViewCount()">by view count</span>
+			</div> 
+		</div> 
+		<ul class="n-vid-results"> 
+			<li ng-repeat="v in videos" ng-click="selectVideo(v)"> 
+				<div class="s-result-left"> 
+					<div class="t-img" style="background-image:url({{v.thumbnail}})"></div> 
+				</div> 
+				<div class="s-result-right"> 
+					<div class="s-result-title">{{ v.title | truncate:50 }}</div> 
+					<div class="s-result-views">views: {{ v.viewCount | number }}</div> 
+					<div class="s-result-rating">rating: {{v.rating | number:(1) }}</div>
+				</div> 
+			</li> 
+		</ul> 
+	
+	</div> 
+		<div class="n-vid-right" ng-show="selectedVideo == true">
+			<div class="n-vid-meta-bx"> 
+				<input type="text" class="n-vid-title-input" id="n-vid-title-input" placeholder="video title" ng-model="video.title"></input> 
+				<label class="rename-video-label rename-video-start">START TIME:</label> <input type="text" class="n-vid-start-input" ng-model="video.start"></input> 
+				<label class="rename-video-label rename-video-end">END TIME:</label> <input type="text" class="n-vid-end-input" ng-model="video.end"></input> 
+			</div> 
+			<div class="n-vid-controls"> 
+				<div class="n-vid-preview-b"> 
+					<div class="n-vid-preview-btn" ng-click="preview()">PREVIEW</div> 
+				</div> 
+				<div class="n-vid-save-b"> 
+					<div class="n-vid-save-btn" ng-click="save()">SAVE</div> 
+				</div> 
+			</div> 
+			
+			<div class="n-vid-preview" id="n-vid-preview"> 
+			
+			</div> 
+		</div> 
+	</div> 
+					
+</div>

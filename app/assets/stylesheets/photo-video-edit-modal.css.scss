@@ -1,0 +1,79 @@
+.e-i-fix {
+	width: 270px;
+	height: 130px;
+	padding: 10px;
+	border-radius: 2px;
+	position: fixed;
+	background-color: #ecf0f1;
+	z-index: 999;
+	display: block;
+	display: none;
+	
+	.e-i-fix-cancel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0px 0px 0px 0px;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		background-color: #c0cdd1;
+		color: #242e31;
+		font-size: 18px;
+		line-height: 30px;
+		border-bottom-right-radius: 2px;
+		border-top-left-radius: 2px;
+	}
+	
+	.e-i-fix-cancel:hover {
+		cursor: pointer;
+		background-color: #94aab1;
+	}
+	
+	.e-i-fix-header {
+		position: absolute;
+		top: 0;
+		left: 60px;
+		width: 160px;
+		padding-top: 5px;
+		height: 30px;
+		color: #999;
+	}
+	
+	input {
+		position: relative;
+		width: 250px;
+		padding: 5px;
+		margin: 30px 0px 10px 0px;
+		background-color: transparent;
+		border: 1px solid #d5dee0;
+		box-shadow: none !important;
+		color: #999;
+	}
+	
+	.btn-group {
+		margin-left: 30px;
+	}
+}
+
+.e-i-fix.editing {
+	display: block;
+}
+
+.e-i-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.7;
+	display: block;
+	z-index: 200;
+	display: block;
+	display: none;
+}
+
+.e-i-overlay.editing {
+	display: block;
+}

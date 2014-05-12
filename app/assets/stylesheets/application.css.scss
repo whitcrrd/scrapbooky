@@ -1,0 +1,17 @@
+//= require jquery.ui.all
+//= require_self
+//= require_tree .
+
+body {
+	padding-top: 55px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #666b70;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.1875rem;
+	background-color: #fff;
+}
+
+.dot-dot {
+	color: transparent;
+}

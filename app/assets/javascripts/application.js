@@ -1,0 +1,10 @@
+//= require jquery
+//= require jquery.ui.all
+//= require jquery_ujs
+//= require turbolinks
+//= require modernizr.min
+//= require lib/angular.min
+//= require lib/angular-resource.min
+//= require lib/ui-bootstrap.min
+//= require todoApp
+//= require_tree .

@@ -1,0 +1,46 @@
+<nav class="sb-main-nav">
+	<div class="sb-book-nav" ng-controller="NavigationController">
+		<div id="pg" ng-cloak ng-init="init()"></div>
+					
+		<div class="sb-book-nav-wrapper">
+		
+			<div class="sb-book-nav-box" ng-click="showDashboard()">
+				<span class="sb-book-nav-logo">SB</span>
+			</div>
+			
+			<nav class="sb-t-nav-links-editing" ng-show="userEditable == true">
+				<edit-save-book book-editable-status-title="bookEditableStatusTitle" editing-status="bookEditableStatus" on-save="saveBookChanges()" on-edit="initBookEdit()"></edit-save-book>
+				
+				<div ng-controller="newPhotoController">
+					<bing-search new-photos="newPhotos" on-save="createNewPhotos()" book-editable-status="bookEditableStatus"></bing-search>	
+				</div>
+				
+				<div ng-controller="newVideoController">
+					<video-search video="newVideo" on-save="createNewVideo()" book-editable-status="bookEditableStatus"></video-search>
+				</div>
+				
+			</nav>
+		
+			<nav class="sb-t-nav-links">
+				<li class="sb-t-nav-link sb-t-nav-link-user">
+					<% if current_user %>
+						<%= link_to "#{current_user.username} <i class='glyphicon glyphicon-off g-off'></i>".html_safe, destroy_user_session_path, method: :delete %>
+					<% else %>
+						<%= link_to "sign in", new_user_session_path, :target => "_self" %> | 
+						<%= link_to "sign up", new_user_registration_path, :target => "_self" %>
+					<% end %>
+				</li>
+				<% if current_user %>
+				<my-books-popover books="myBooks"></my-books-popover>
+				<div ng-controller="newBookController">
+					<new-book-popover book-title="newBook.title" on-save="createNewBook();"></new-book-popover>
+				</div>
+				
+				<% end %>
+				
+				
+			</nav>
+	
+		</div>
+	</div>
+</nav>

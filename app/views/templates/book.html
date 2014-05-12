@@ -1,0 +1,24 @@
+<div id="pg" ng-cloak ng-init="init()"></div>
+
+<div ng-controller="editItemController">
+	<edit-item-modal current-editing-item="currentEditingItem" on-delete-video="deleteCurrentVideo()" on-delete-photo="deleteCurrentPhoto()" on-update-photo="updatePhotoTitle()" on-update-video="updateVideoTitle()"></edit-item-modal>
+</div>
+
+
+<div ng-controller="showItemController">
+	<show-video-modal showing-item="showingVideoItem" current-item="currentVideoItem"></show-video-modal>
+
+	<show-photo-modal showing-item="showingPhotoItem" current-item="currentPhotoItem"></show-photo-modal>	
+</div>
+
+<div ng-controller="itemPositionController">
+	<div class="sb-grid-s">
+		<div gridster="gridsterOpts">
+			<ul>
+				<li gridster-item="item" ng-repeat="item in bookItems" class="draggable gridster-i-bx">
+					<edit-box value="item" editing-status="bookEditableStatus" on-show="showItem(item)"></edit-box>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

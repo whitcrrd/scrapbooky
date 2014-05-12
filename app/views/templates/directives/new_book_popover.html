@@ -1,0 +1,14 @@
+<li class='sb-t-nav-link sb-t-nav-link-new-book' ng-mouseleave='closeNewBookForm()' ng-mouseenter='viewNewBookForm()'>
+	NEW BOOK
+	<div class='new-book-pop'> 
+		<input type='text' class='new-book-title' ng-model='bookTitle' placeholder='book title' required/> 
+		<div class='new-book-pop-bottom'> 
+			<div class='cancel-new-book' ng-click='closeNewBookForm()'>
+				<i class='glyphicon glyphicon-remove'></i>
+			</div> 
+			<div class='save-new-book' ng-click='saveNewBook()'>
+				<i class='glyphicon glyphicon-ok'></i>
+			</div> 
+		</div> 
+	</div>
+</li>

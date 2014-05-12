@@ -1,0 +1,14 @@
+<div class="my-class" ng-mouseenter="previewShow()" ng-mouseleave="cancelPreviewShow()" style="background-image:url({{value.url}})" ng-click="showItem(value)">
+	<div class="sb-gred-edit-bx" ng-show="editingStatus == true" ng-click="clickedCog($event, value)">
+		<span class="sb-i-gear-w"> </span> 
+	</div>
+	<div ng-show="previewing == true" class="preview-show-item-overlay"> 
+		<div class="preview-show-item-overlay-title">{{value.title | truncate:30}} 
+		
+		</div> 
+		<div class="preview-show-item-overlay-icon"> 
+			<i class="glyphicon glyphicon-{{itemIcon}}"></i>
+		</div> 
+	</div> 
+		
+</div>

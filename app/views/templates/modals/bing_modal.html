@@ -1,0 +1,48 @@
+<li ng-show="bookEditableStatus == true" class="sb-t-nav-link-add sb-t-nav-link-a-photo" ng-click="openPhotoForm()">+ PHOTO</li>
+
+<div class="sb-overlay-p sb-overlay-p-slidedown sb-overlay-p-{{closeStatus}} sb-overlay-p-{{openStatus}}">
+	<div class="sb-overlay-close-btn" ng-click="close()"><i class="glyphicon glyphicon-remove"></i></div>
+	<div class="n-vid-bx">
+		<div class="n-pix-first active" id="n-pix-first" ng-show="starting == true">
+				<p class="n-pix-first-title">search for images using the bing image search api</p>
+				<input ng-model="bingSearch" class="bing-search-input" id="bing-search-input" placeholder="ex: puppies, boogie cousins, nyc skyline"></input>
+				<div class="bing-search-btn" id="bing-seach-btn" ng-click="searchBing()">SEARCH</div>				
+		</div>
+		<div class="n-pix-second" id="n-pix-second" ng-show="searching == true">
+			<div class="n-pix-second-top">
+				
+				<div class="n-photos-controls">
+					<div class="edit-titles-btn" ng-click="editTitles()">
+						EDIT TITLES
+					</div>
+					<div class="save-photos-btn" ng-click="savePhotos()">
+						SAVE
+					</div>
+				</div>
+			</div>
+			<div class="n-pix-second-top-title">select up to four photos (scroll for more images)</div>
+			<div class="n-pix-second-results">
+				<div class="p-row" ng-repeat="photoRow in bingPhotos">
+					<div ng-repeat="photo in photoRow" class="p-item" ng-class="{'selected': photo.selected}" ng-click="toggleSelection(photo)">
+						<div class="p-item-img" style="background-image:url('{{photo.thumbnail}}')"></div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	
+		<div class="n-pix-third" id="n-pix-third" ng-show="editing == true">
+			<div class="n-pix-third-top">
+				<div class="save-photos-btn" ng-click="savePhotos()">SAVE & ADD PHOTOS</div>
+			</div>
+			<div class="edit-photos-container">
+				<div ng-repeat="photo in newPhotos" class="selected-photo-edit">
+					<div class="selected-photo-img" style="background-image:url('{{photo.thumbnail}}')"></div>
+					<input type="text" ng-model="photo.title" placeholder="add title..." class="selected-photo-title-input"></input>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="show-i-modal" ng-show="showingItem == true"> 
+	<div class="show-i-modal-close" ng-click="closeItem()">x</div> 
+	<div class="show-i-modal-content"> 
+		<div class="text-center show-i-modal-title">{{currentItem.title | truncate:50}}</div> 
+		<div class="youtube-s-wrapper"> 
+			<iframe class="youtube-player" type="text/html" height="80%" width="100%" src="http://www.youtube.com/embed/{{currentItem.youtube_id}}?autoplay=1&controls=0&showinfo=0&rel=0&autohide=1&start={{currentItem.start}}&end={{currentItem.end}}" frameborder="0"></iframe> 
+		</div> 
+	</div>
+  </div> 
+<div class="show-i-modal-overlay" id="show-i-modal-overlay"></div>

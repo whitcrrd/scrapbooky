@@ -1,0 +1,8 @@
+<div class="show-i-modal-p" ng-show="showingItem == true"> 
+	<div class="show-i-modal-close" ng-click="closeItem()">x</div> 
+	<div class="show-i-modal-content-p"> 
+		<div class="show-i-modal-title-p">{{currentItem.title}}</div> 
+		<div class="modal-content-p-img" style="background-image:url({{currentItem.url}});" ng-show="currentItem.cname ==  'photo' "></div>
+	</div> 
+</div> 
+<div class="show-i-modal-overlay-p" id="show-i-modal-overlay-p"></div>

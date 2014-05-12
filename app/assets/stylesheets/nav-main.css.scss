@@ -1,0 +1,196 @@
+.sb-book-nav {
+	height: 55px;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	min-width: 815px;
+	width: 100%;
+	z-index: 500;
+	padding: 0;
+	
+	.sb-book-nav-box {
+		display: block;
+		float: left;
+		height: 100%;
+		text-align: center;
+		width: 140px;
+		height: 55px;
+		.sb-book-nav-logo {
+			display: inline-block;
+			left: 0;
+			position: relative;
+			top: 15px;
+			font-size: 14px;
+			color: #1e79a0;
+			font-weight: 200;
+			letter-spacing: 1.2px;
+		}
+	}
+	.sb-book-nav-box:hover {
+		cursor: pointer;
+		background-color: #28303e;
+		color: #fff;
+		
+		.sb-book-nav-logo {
+			color: #fff;
+		}
+	}
+	
+	a.sb-book-nav-logo-link {
+		display: block;
+		float: left;
+		height: 100%;
+		text-align: center;
+		width: 140px;
+		cursor: pointer;
+		text-decoration: none;
+		
+		.sb-book-nav-logo {
+			display: inline-block;
+			left: 0;
+			position: relative;
+			top: 15px;
+			font-size: 14px;
+			color: #b6c1d3;
+			font-weight: 200;
+			letter-spacing: 1.2px;
+		}
+	}
+	a.sb-book-nav-logo-link:after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 140px;
+		display: block;
+		height: 55px;
+		width: 1px;
+		background-color:#34495e;
+	}
+	
+	nav.sb-t-nav-links-editing {
+		position: initial;
+		float: left;
+		width: 305px;
+		height: 55px;
+		background-color: #fff;
+		color: #1e79a0;
+		font-weight: 400;
+		
+		.sb-t-nav-link-add {
+			list-style: none;
+			float: left;
+			height: 55px;
+			width: 100px;
+			padding: 20px 10px 0px 10px;
+			margin: 0;
+			font-size: 12px;
+			line-height: 12px;
+			font-weight: 400;
+			text-align: center;
+		}
+		
+		.sb-t-nav-link-add:hover {
+			background-color: #62ade4;
+			cursor: pointer;
+			color: #fff;
+		}
+			
+		.sb-t-nav-link-book-es:hover {
+			background-color: #62e499;
+		}
+		
+		.sb-t-nav-link-a-video:hover {
+			background-color: #62ade4;
+		}
+	}
+	
+	nav.sb-t-nav-links {
+		position: initial;
+		float: right;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		padding-left: 0px;
+		padding-right: 0px;
+		height: 55px;
+		display: block;
+		background-color: #fff;
+		color: #1e79a0;
+		font-weight: 400;
+		width: 365px;
+		
+		li.sb-t-nav-link {
+			position: relative;
+			float: right;
+			list-style: none;
+			margin: 0;
+			padding: 20px 10px 0px 10px;
+			width: 100px;
+			height: 55px;
+			margin: 0;
+			font-size: 12px;
+			line-height: 12px;
+			font-weight: 400;
+			text-align: center;				
+		}
+		
+		li.sb-t-nav-link-user {
+			width: 160px;
+			height: 55px;
+			text-align: right;
+			padding-right: 20px;
+			padding-top: 18px;
+			font-size: 12px;
+			line-height: 12px;
+			font-weight: 400;
+			text-transform: uppercase;
+			.g-off {
+				margin-left: 5px;
+			}
+		}
+	
+		li.sb-t-nav-link:hover {
+			cursor: pointer;
+			color: #fff;
+		}
+		li.sb-t-nav-link-user:hover {
+			background-color: #e4626c;
+			cursor: default;
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+		
+		li.sb-t-nav-link-my-books:hover {
+			background-color: #62ade4;
+		}
+		li.sb-t-nav-link-new-book:hover {
+			background-color: #62ade4;
+		}
+	}
+}
+
+.sb-book-nav:before {
+	content: " ";
+	display: table;
+}
+
+.sb-book-nav:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.sb-book-nav:after {
+	content: " ";
+	position: fixed;
+	top: 55px;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #f6f6f6;
+	z-index: -1;
+}
