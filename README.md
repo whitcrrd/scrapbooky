@@ -27,3 +27,4 @@ Check out the demo at [scrapbook](http://scrapbook.herokuapp.com/).
  - initially, started with the idea of being able to create a scrapbook with texts/stories, songs, photos, and videos, so I used polymorphic relationships for items in books, mapping to photos, videos, and text... ended up removing text, but still kept polymorphism. Ideally, I would like to combine photos/videos into a single model (STI), which would reduce the amount of repeated code necessary (handling photos / videos separately) in angular
  - lot of redundant CSS
  - need to clean up controllers / directives for angular, round II would hopefully do all the above
+ - the editing item process needs to be changed -- either removing completely, and just giving the option of deleting an item, or presenting a full form that would allow a user to edit start/end times of videos, or replace item with new item via youtube/bing.
